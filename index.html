@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Think Silicon — Scalable SaaS Ecosystems & Digital Product Engineering</title>
+  
+  <meta name="description" content="Think Silicon is a modern SaaS engineering company architecting scalable cloud platforms, enterprise management systems, high-traffic consumer portals, and intelligent digital products.">
+  <meta name="keywords" content="Think Silicon, SaaS Company, Software Engineering, Cloud Architecture, QuizBox BD, Gulshan Club Hall Booking, NOVA, Slashed, Enterprise SaaS">
+  <meta name="author" content="Think Silicon">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Think Silicon — Next-Generation SaaS Company">
+  <meta property="og:description" content="Explore live SaaS platforms, enterprise booking systems, and high-concurrency cloud products engineered by Think Silicon.">
+  <meta property="og:image" content="assets/images/think-silicon-logo.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/jpeg" href="assets/images/think-silicon-logo.jpg">
+</head>
+<body>
+
+  <!-- Ambient Glowing Blobs & Grid -->
+  <div class="ambient-blob ambient-blob-1"></div>
+  <div class="ambient-blob ambient-blob-2"></div>
+  <div class="ambient-blob ambient-blob-3"></div>
+  <div class="grid-overlay"></div>
+
+  <!-- Interactive Particles Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <a href="#hero" class="nav-brand">
+      <img src="assets/images/think-silicon-logo.jpg" alt="Think Silicon Logo" class="brand-emblem-img">
+      <span>THINK <span class="text-gradient">SILICON</span></span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#hero" class="active">Overview</a></li>
+      <li><a href="#products">SaaS Products</a></li>
+      <li><a href="#capabilities">Engineering</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <!-- Day / Night Mode Toggle (White Shade / Dark Shade) -->
+      <button id="modeToggle" class="mode-toggle-btn" title="Switch to Day Mode (White Shade)">☀️</button>
+
+      <!-- Live Theme Color Mood Picker -->
+      <div class="theme-picker" title="Switch Color Accents">
+        <button class="theme-btn active" data-theme-set="emerald" title="Emerald Silicon"></button>
+        <button class="theme-btn" data-theme-set="violet" title="Cyber Violet"></button>
+        <button class="theme-btn" data-theme-set="gold" title="Obsidian Gold"></button>
+        <button class="theme-btn" data-theme-set="azure" title="Cosmic Azure"></button>
+      </div>
+
+      <a href="#contact" class="btn btn-primary btn-sm">Partner With Us</a>
+      <button class="mobile-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </nav>
+
+  <!-- Main Content Wrapper -->
+  <div class="content-wrapper">
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          <span>Scalable Cloud Ecosystems & SaaS Engineering</span>
+        </div>
+
+        <h1 class="hero-title">
+          We Architect <span class="text-gradient">Scalable SaaS</span> That Defines Tomorrow.
+        </h1>
+
+        <p class="hero-desc">
+          <strong>Think Silicon</strong> is an avant-garde software & SaaS development firm. We design, construct, and scale high-concurrency cloud applications, enterprise management platforms, and intelligent digital products built for peak performance.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#products" class="btn btn-primary">
+            <span>Explore SaaS Portfolio</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+          </a>
+          
+          <a href="#contact" class="btn btn-silver">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            <span>Consultation</span>
+          </a>
+
+          <button class="btn btn-outline" data-copy="prodiptopantho@gmail.com" title="Copy corporate inquiry email">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            <span>Copy Email</span>
+          </button>
+        </div>
+
+        <div class="hero-stats-mini">
+          <div class="stat-item">
+            <h3 class="font-mono">4+</h3>
+            <p>Live SaaS Products</p>
+          </div>
+          <div class="stat-item">
+            <h3 class="font-mono">99.9%</h3>
+            <p>Cloud SLA Uptime</p>
+          </div>
+          <div class="stat-item">
+            <h3 class="font-mono">Zero</h3>
+            <p>Downtime Target</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual (Clean, removed the two hovering chips) -->
+      <div class="hero-visual">
+        <div class="brand-showcase-card">
+          <div class="brand-emblem-wrap">
+            <img src="assets/images/think-silicon-logo.jpg" alt="Think Silicon Monogram Emblem">
+          </div>
+
+          <div class="brand-info">
+            <h2>Think Silicon</h2>
+            <div class="brand-tagline">Architecting Digital Frontiers</div>
+
+            <div class="brand-highlights">
+              <span class="brand-tag">SaaS Engineering</span>
+              <span class="brand-tag">Cloud Microservices</span>
+              <span class="brand-tag">Enterprise Portals</span>
+              <span class="brand-tag">AI Integration</span>
+            </div>
+
+            <div class="brand-card-footer">
+              <span>● Status: Active Deployments</span>
+              <span style="color: var(--primary); font-weight: 700;">Global Infrastructure</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- METRICS & IMPACT BANNER -->
+    <section class="metrics-section">
+      <div class="metrics-grid">
+        <div class="glass-card metric-card">
+          <div class="metric-icon">🚀</div>
+          <div class="metric-num" data-target="4" data-suffix="+">0</div>
+          <div class="metric-label">Deployed SaaS & Web Platforms</div>
+        </div>
+
+        <div class="glass-card metric-card">
+          <div class="metric-icon">👥</div>
+          <div class="metric-num" data-target="50" data-suffix="K+">0</div>
+          <div class="metric-label">Monthly Active Users Served</div>
+        </div>
+
+        <div class="glass-card metric-card">
+          <div class="metric-icon">⚡</div>
+          <div class="metric-num" data-target="99" data-suffix=".9%">0</div>
+          <div class="metric-label">High-Availability Uptime</div>
+        </div>
+
+        <div class="glass-card metric-card">
+          <div class="metric-icon">🌐</div>
+          <div class="metric-num" data-target="100" data-suffix="%">0</div>
+          <div class="metric-label">Modern Microservice Stack</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SAAS PRODUCTS SECTION (SINGLE VERTICAL SCROLLABLE TILES STREAM) -->
+    <section class="section" id="products">
+      <div class="section-header">
+        <span class="section-tag">Product Ecosystem</span>
+        <h2 class="section-title">Engineered by Think Silicon</h2>
+        <p class="section-subtitle">Scroll through our vertical ecosystem of live SaaS platforms, enterprise management systems, and commerce engines.</p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="all">All SaaS Products</button>
+        <button class="filter-btn" data-filter="consumer">Consumer & EdTech</button>
+        <button class="filter-btn" data-filter="enterprise">Enterprise Systems</button>
+        <button class="filter-btn" data-filter="commerce">E-Commerce & Retail</button>
+        <button class="filter-btn" data-filter="productivity">Productivity & Utilities</button>
+      </div>
+
+      <!-- Single Vertical Stream (2/3 Compact Height Tiles with Scroll Fade In / Fade Out) -->
+      <div class="products-stream">
+
+        <!-- 1. QUIZBOX BD -->
+        <a href="https://quizboxbd.com" target="_blank" rel="noopener noreferrer" class="product-tile fade-scroll-item in-view" data-category="consumer enterprise" title="Open QuizBox BD">
+          <div class="tile-thumb">
+            <img src="assets/images/quizbox-real-hd.jpg" alt="QuizBox BD Platform Banner" onerror="this.src='assets/images/quizbox-banner-hd.jpg'">
+            <div class="tile-badge-overlay">
+              <span class="badge-live">● Live SaaS</span>
+              <span class="badge-category">EdTech & Gaming</span>
+            </div>
+          </div>
+          <div class="tile-body">
+            <h3 class="tile-title">QuizBox BD (কুইজবক্স বিডি) — Bangladesh's #1 Quiz Platform</h3>
+            <p class="tile-desc">
+              High-traffic, gamified educational quiz contest platform featuring real-time tournament mechanisms, live leaderboard synchronization, instant cash prizes, and dynamic rewards engineered for peak concurrency.
+            </p>
+            <div class="tile-tech">
+              <span class="tech-tag">Gamified SaaS</span>
+              <span class="tech-tag">Real-Time Sync</span>
+              <span class="tech-tag">MySQL Cluster</span>
+              <span class="tech-tag">High Concurrency</span>
+            </div>
+            <div class="tile-links">
+              <div class="tile-link">
+                <span>Launch QuizBox BD</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </div>
+              <span class="font-mono text-muted" style="font-size: 0.8rem;">quizboxbd.com</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 2. GULSHAN CLUB HALL BOOKING SYSTEM -->
+        <a href="https://hallbooking.gulshanclub.com" target="_blank" rel="noopener noreferrer" class="product-tile fade-scroll-item" data-category="enterprise" title="Open Gulshan Club Hall Booking System">
+          <div class="tile-thumb">
+            <img src="assets/images/gulshan-real-hd.jpg" alt="Gulshan Club Hall Booking System" onerror="this.src='assets/images/gulshan-banner-hd.jpg'">
+            <div class="tile-badge-overlay">
+              <span class="badge-live">● Enterprise SaaS</span>
+              <span class="badge-category">Hospitality</span>
+            </div>
+          </div>
+          <div class="tile-body">
+            <h3 class="tile-title">Hall Booking System || Gulshan Club Ltd.</h3>
+            <p class="tile-desc">
+              Comprehensive venue reservation and scheduling management ecosystem built for Gulshan Club. Features collision-prevention calendar logic, multi-tier approvals, automated invoicing, and full audit tracking.
+            </p>
+            <div class="tile-tech">
+              <span class="tech-tag">Enterprise Portal</span>
+              <span class="tech-tag">Reservation Engine</span>
+              <span class="tech-tag">RBAC Security</span>
+              <span class="tech-tag">Automated Billing</span>
+            </div>
+            <div class="tile-links">
+              <div class="tile-link">
+                <span>Explore Enterprise Portal</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </div>
+              <span class="font-mono text-muted" style="font-size: 0.8rem;">hallbooking.gulshanclub.com</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 3. NOVA — OBJECTS FROM TOMORROW -->
+        <a href="https://templateecommerce-seven.vercel.app" target="_blank" rel="noopener noreferrer" class="product-tile fade-scroll-item" data-category="commerce" title="Open NOVA Storefront">
+          <div class="tile-thumb">
+            <img src="assets/images/nova-real-hd.jpg" alt="NOVA Objects from tomorrow" onerror="this.src='assets/images/nova-banner-hd.jpg'">
+            <div class="tile-badge-overlay">
+              <span class="badge-live">● Live Demo</span>
+              <span class="badge-category">Next-Gen Commerce</span>
+            </div>
+          </div>
+          <div class="tile-body">
+            <h3 class="tile-title">NOVA — Objects from tomorrow</h3>
+            <p class="tile-desc">
+              Avant-garde headless e-commerce storefront engineered with fluid micro-interactions, instantaneous page transitions, high-velocity cart processing, and modern cyber-luxe aesthetics.
+            </p>
+            <div class="tile-tech">
+              <span class="tech-tag">React / Next.js</span>
+              <span class="tech-tag">Tailwind CSS</span>
+              <span class="tech-tag">Vercel Edge</span>
+              <span class="tech-tag">Headless Store</span>
+            </div>
+            <div class="tile-links">
+              <div class="tile-link">
+                <span>Experience NOVA</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </div>
+              <span class="font-mono text-muted" style="font-size: 0.8rem;">templateecommerce-seven.vercel.app</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 4. SLASHED -->
+        <a href="https://slashed-app-web.vercel.app" target="_blank" rel="noopener noreferrer" class="product-tile fade-scroll-item" data-category="productivity" title="Open Slashed App">
+          <div class="tile-thumb">
+            <img src="assets/images/slashed-real-hd.jpg" alt="Slashed Productivity Application" onerror="this.src='assets/images/slashed-banner-hd.jpg'">
+            <div class="tile-badge-overlay">
+              <span class="badge-live">● Live App</span>
+              <span class="badge-category">Productivity SaaS</span>
+            </div>
+          </div>
+          <div class="tile-body">
+            <h3 class="tile-title">Slashed — Fast Web Application</h3>
+            <p class="tile-desc">
+              High-velocity, minimalist web productivity application engineered for rapid workflow execution, reactive client-side states, and sleek distraction-free ergonomics.
+            </p>
+            <div class="tile-tech">
+              <span class="tech-tag">Micro-SaaS</span>
+              <span class="tech-tag">Modern JS</span>
+              <span class="tech-tag">Client State</span>
+              <span class="tech-tag">Speed Optimized</span>
+            </div>
+            <div class="tile-links">
+              <div class="tile-link">
+                <span>Launch Slashed</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </div>
+              <span class="font-mono text-muted" style="font-size: 0.8rem;">slashed-app-web.vercel.app</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 5. THINK SILICON FOUNDRY -->
+        <a href="#contact" class="product-tile fade-scroll-item" data-category="enterprise" title="Request Custom Build">
+          <div class="tile-thumb">
+            <img src="assets/images/foundry-banner-hd.jpg" alt="Think Silicon Foundry Custom Solutions">
+            <div class="tile-badge-overlay">
+              <span class="badge-category">Bespoke Engineering</span>
+            </div>
+          </div>
+          <div class="tile-body">
+            <h3 class="tile-title">Custom SaaS Architecture & AI Solutions</h3>
+            <p class="tile-desc">
+              Tailored software development for venture-backed startups and growing businesses. From architecting multi-tenant databases to integrating AI prediction pipelines and automated billing workflows.
+            </p>
+            <div class="tile-tech">
+              <span class="tech-tag">Multi-Tenant DB</span>
+              <span class="tech-tag">Microservices</span>
+              <span class="tech-tag">AI Workflows</span>
+              <span class="tech-tag">Scalability</span>
+            </div>
+            <div class="tile-links">
+              <div class="tile-link">
+                <span>Request Custom Build</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+              <span class="font-mono text-muted" style="font-size: 0.8rem;">Think Silicon Foundry</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- SAAS ENGINEERING CAPABILITIES & ARCHITECTURE -->
+    <section class="section" id="capabilities">
+      <div class="section-header">
+        <span class="section-tag">Core Capabilities</span>
+        <h2 class="section-title">The Think Silicon Advantage</h2>
+        <p class="section-subtitle">Our architectural philosophy is founded on high-throughput reliability, modular extensibility, and delightful user experiences.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="glass-card service-card">
+          <div class="service-icon">⚡</div>
+          <h3>High-Concurrency Cloud</h3>
+          <p>
+            We design distributed architectures that effortlessly handle traffic spikes, with multi-layer caching, connection pooling, and sub-second API responses.
+          </p>
+        </div>
+
+        <div class="glass-card service-card">
+          <div class="service-icon">🔒</div>
+          <h3>Enterprise Security & RBAC</h3>
+          <p>
+            Granular role-based permissions, encrypted credential storage, JWT/OAuth 2.0 flows, and automated audit logging ensuring business-critical data integrity.
+          </p>
+        </div>
+
+        <div class="glass-card service-card">
+          <div class="service-icon">🧠</div>
+          <h3>AI & Algorithmic Automation</h3>
+          <p>
+            Integrating intelligent recommendation engines, automated workflows, and LLM-driven features directly into your core business products.
+          </p>
+        </div>
+
+        <div class="glass-card service-card">
+          <div class="service-icon">🎨</div>
+          <h3>World-Class UI/UX</h3>
+          <p>
+            Fluid micro-interactions, responsive design systems, accessible ergonomics, and cohesive branding that elevates user retention and brand prestige.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT THINK SILICON -->
+    <section class="section" id="about">
+      <div class="glass-card" style="padding: 3rem 2.5rem; border-color: var(--border-card-hover);">
+        <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 3rem; align-items: center;">
+          <div style="text-align: center;">
+            <img src="assets/images/think-silicon-logo.jpg" alt="Think Silicon Monogram" style="max-width: 240px; border-radius: 1.5rem; border: 2px solid rgba(255,255,255,0.15); box-shadow: 0 15px 40px rgba(0,0,0,0.3);">
+          </div>
+          <div>
+            <span class="section-tag">About Company</span>
+            <h2 style="font-size: 2.2rem; font-weight: 800; color: var(--text-primary); margin-bottom: 1rem;">Building the Future of Software at Scale.</h2>
+            <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
+              <strong>Think Silicon</strong> is a technology studio that specializes in transforming ambitious concepts into resilient, scalable SaaS applications. Guided by an obsession with speed, architectural elegance, and user delight, we partner with visionary teams to deploy systems that endure.
+            </p>
+            <div style="display: flex; gap: 2rem; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.25rem;">
+              <div>
+                <h4 style="font-size: 1.5rem; font-weight: 800; color: var(--text-primary);">Dhaka, BD</h4>
+                <p style="font-size: 0.82rem; color: var(--text-muted); text-transform: uppercase;">Engineering Hub</p>
+              </div>
+              <div>
+                <h4 style="font-size: 1.5rem; font-weight: 800; color: var(--text-primary);">Global</h4>
+                <p style="font-size: 0.82rem; color: var(--text-muted); text-transform: uppercase;">Client Reach</p>
+              </div>
+              <div>
+                <h4 style="font-size: 1.5rem; font-weight: 800; color: var(--primary);">Active</h4>
+                <p style="font-size: 0.82rem; color: var(--text-muted); text-transform: uppercase;">Product Pipeline</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT & CONSULTATION SECTION -->
+    <section class="section" id="contact">
+      <div class="section-header">
+        <span class="section-tag">Enterprise Inquiries</span>
+        <h2 class="section-title">Let's Build Your Next SaaS</h2>
+        <p class="section-subtitle">Discuss custom product engineering, enterprise license inquiries, or schedule a technical advisory session.</p>
+      </div>
+
+      <div class="contact-container">
+        <!-- Left: Corporate Info -->
+        <div class="contact-info">
+          <h3>Empower your product vision with Think Silicon.</h3>
+          <p>
+            Whether you need a high-concurrency SaaS built from scratch, an enterprise venue management solution, or architectural consultation, our engineering team is ready.
+          </p>
+
+          <div class="contact-channels">
+            <a href="mailto:prodiptopantho@gmail.com" class="contact-card-link">
+              <div class="contact-icon-box">✉️</div>
+              <div>
+                <h4>Corporate Communications</h4>
+                <p>prodiptopantho@gmail.com</p>
+              </div>
+            </a>
+
+            <a href="tel:+8801626945062" class="contact-card-link">
+              <div class="contact-icon-box">📞</div>
+              <div>
+                <h4>Direct Advisory Hotline</h4>
+                <p>+880 1626-945062</p>
+              </div>
+            </a>
+
+            <div class="contact-card-link">
+              <div class="contact-icon-box">🏢</div>
+              <div>
+                <h4>Headquarters</h4>
+                <p>Dhaka, Bangladesh</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Inquiry Form -->
+        <div class="glass-card">
+          <form class="contact-form" id="saasContactForm">
+            <div class="form-group">
+              <label for="contactName">Your Name</label>
+              <input type="text" id="contactName" class="form-control" placeholder="e.g. Alex Morgan" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contactEmail">Work Email</label>
+              <input type="email" id="contactEmail" class="form-control" placeholder="e.g. alex@company.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contactCompany">Company / Organization</label>
+              <input type="text" id="contactCompany" class="form-control" placeholder="e.g. Acme Tech Solutions">
+            </div>
+
+            <div class="form-group">
+              <label for="inquiryType">Inquiry Type</label>
+              <select id="inquiryType" class="form-control">
+                <option value="New SaaS Build">New SaaS Product Development</option>
+                <option value="Enterprise Platform">Enterprise Management Platform (like Gulshan Club)</option>
+                <option value="QuizBox Partnership">QuizBox BD Partnership / License</option>
+                <option value="Architecture Consultation">System Architecture Consultation</option>
+                <option value="Other">Other Strategic Opportunity</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="contactMessage">Project Scope / Requirements</label>
+              <textarea id="contactMessage" class="form-control" rows="4" placeholder="Briefly describe your goals, timeline, and requirements..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <span>Submit Enterprise Inquiry</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="#hero" class="nav-brand">
+            <img src="assets/images/think-silicon-logo.jpg" alt="Think Silicon Logo" class="brand-emblem-img">
+            <span>THINK <span class="text-gradient">SILICON</span></span>
+          </a>
+          <p>© 2026 Think Silicon. All rights reserved. Architecting Next-Gen SaaS Ecosystems.</p>
+        </div>
+
+        <div class="footer-socials" style="display: flex; gap: 1.25rem;">
+          <a href="https://quizboxbd.com" target="_blank" rel="noopener noreferrer" style="color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; font-weight: 600;">QuizBox BD</a>
+          <a href="https://hallbooking.gulshanclub.com" target="_blank" rel="noopener noreferrer" style="color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; font-weight: 600;">Gulshan Club Booking</a>
+          <a href="https://templateecommerce-seven.vercel.app" target="_blank" rel="noopener noreferrer" style="color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; font-weight: 600;">NOVA</a>
+          <a href="https://slashed-app-web.vercel.app" target="_blank" rel="noopener noreferrer" style="color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; font-weight: 600;">Slashed</a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Main JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
