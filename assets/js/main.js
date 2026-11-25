@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavbarScroll();
   initMobileNav();
   initScrollFadeInOut();
+  initSectionReveals();
   initProductFilters();
   initCounters();
   init3DTilt();
@@ -88,7 +89,34 @@ function initScrollFadeInOut() {
 }
 
 /* ==========================================================================
-   3. AMBIENT PARTICLES CANVAS
+   2B. SMOOTH SECTION & CARD SCROLL-REVEAL TRANSITIONS
+   ========================================================================== */
+function initSectionReveals() {
+  const revealEls = document.querySelectorAll('.reveal-on-scroll');
+  if (!revealEls.length) return;
+
+  if (!('IntersectionObserver' in window)) {
+    revealEls.forEach(el => el.classList.add('is-revealed'));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  revealEls.forEach((el, idx) => {
+    el.style.transitionDelay = `${Math.min((idx % 4) * 70, 210)}ms`;
+    observer.observe(el);
+  });
+}
+
+/* ==========================================================================
+   3. ANIMATED DEEP EMERALD WAVES & SUBTLE PARTICLE CANVAS
    ========================================================================== */
 function initParticleCanvas() {
   const canvas = document.getElementById('bg-canvas');
@@ -96,6 +124,7 @@ function initParticleCanvas() {
   const ctx = canvas.getContext('2d');
   let width, height;
   let particles = [];
+  let waveTime = 0;
   let mouse = { x: null, y: null, radius: 150 };
 
   function resize() {
@@ -116,7 +145,7 @@ function initParticleCanvas() {
     mouse.y = null;
   });
 
-  const particleCount = Math.min(Math.floor(window.innerWidth / 20), 65);
+  const particleCount = Math.min(Math.floor(window.innerWidth / 32), 42);
 
   class Particle {
     constructor() {
@@ -126,11 +155,12 @@ function initParticleCanvas() {
     reset() {
       this.x = Math.random() * width;
       this.y = Math.random() * height;
-      this.size = Math.random() * 2 + 0.8;
-      this.vx = (Math.random() - 0.5) * 0.5;
-      this.vy = (Math.random() - 0.5) * 0.5;
-      this.baseAlpha = Math.random() * 0.5 + 0.2;
+      this.size = Math.random() * 1.9 + 0.6;
+      this.vx = (Math.random() - 0.5) * 0.35;
+      this.vy = (Math.random() - 0.5) * 0.35;
+      this.baseAlpha = Math.random() * 0.42 + 0.15;
       this.alpha = this.baseAlpha;
+      this.isLime = Math.random() > 0.84;
     }
 
     update() {
@@ -146,20 +176,25 @@ function initParticleCanvas() {
         const dist = Math.hypot(dx, dy);
         if (dist < mouse.radius) {
           const force = (mouse.radius - dist) / mouse.radius;
-          this.x -= (dx / dist) * force * 2.2;
-          this.y -= (dy / dist) * force * 2.2;
-          this.alpha = Math.min(1, this.baseAlpha + 0.4);
+          this.x -= (dx / dist) * force * 1.8;
+          this.y -= (dy / dist) * force * 1.8;
+          this.alpha = Math.min(0.95, this.baseAlpha + 0.35);
         } else {
           this.alpha = this.baseAlpha;
         }
       }
     }
 
-    draw() {
-      const isDay = document.documentElement.getAttribute('data-mode') === 'day';
+    draw(isDay) {
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-      ctx.fillStyle = isDay ? `rgba(5, 150, 105, ${this.alpha * 0.85})` : `rgba(52, 211, 153, ${this.alpha})`;
+      if (this.isLime && !isDay) {
+        ctx.fillStyle = `rgba(163, 230, 53, ${this.alpha * 0.75})`;
+      } else {
+        ctx.fillStyle = isDay
+          ? `rgba(5, 150, 105, ${this.alpha * 0.55})`
+          : `rgba(16, 185, 129, ${this.alpha})`;
+      }
       ctx.fill();
     }
   }
@@ -168,30 +203,58 @@ function initParticleCanvas() {
     particles.push(new Particle());
   }
 
+  const waveLayers = [
+    { amp: 46, freq: 0.0022, speed: 0.007, yRatio: 0.36, darkFill: 'rgba(3, 22, 15, 0.72)', dayFill: 'rgba(16, 185, 129, 0.07)', strokeDark: 'rgba(16, 185, 129, 0.14)', strokeDay: 'rgba(5, 150, 105, 0.14)' },
+    { amp: 58, freq: 0.0017, speed: 0.0052, yRatio: 0.54, darkFill: 'rgba(5, 34, 23, 0.62)', dayFill: 'rgba(52, 211, 153, 0.08)', strokeDark: 'rgba(52, 211, 153, 0.16)', strokeDay: 'rgba(16, 185, 129, 0.16)' },
+    { amp: 42, freq: 0.0028, speed: 0.009, yRatio: 0.72, darkFill: 'rgba(7, 46, 31, 0.55)', dayFill: 'rgba(5, 150, 105, 0.09)', strokeDark: 'rgba(163, 230, 53, 0.12)', strokeDay: 'rgba(5, 150, 105, 0.12)' },
+    { amp: 34, freq: 0.0034, speed: 0.011, yRatio: 0.86, darkFill: 'rgba(2, 16, 11, 0.82)', dayFill: 'rgba(16, 185, 129, 0.11)', strokeDark: 'rgba(16, 185, 129, 0.2)', strokeDay: 'rgba(5, 150, 105, 0.18)' }
+  ];
+
+  function drawWaves(isDay) {
+    waveLayers.forEach((layer, index) => {
+      ctx.beginPath();
+      const baseY = height * layer.yRatio;
+      ctx.moveTo(0, height);
+
+      for (let x = 0; x <= width + 20; x += 18) {
+        const y =
+          baseY +
+          Math.sin(x * layer.freq + waveTime * layer.speed * 100 + index * 1.4) * layer.amp +
+          Math.cos(x * layer.freq * 0.55 - waveTime * layer.speed * 65) * (layer.amp * 0.42);
+        ctx.lineTo(x, y);
+      }
+
+      ctx.lineTo(width, height);
+      ctx.closePath();
+
+      ctx.fillStyle = isDay ? layer.dayFill : layer.darkFill;
+      ctx.fill();
+
+      ctx.beginPath();
+      for (let x = 0; x <= width + 20; x += 18) {
+        const y =
+          baseY +
+          Math.sin(x * layer.freq + waveTime * layer.speed * 100 + index * 1.4) * layer.amp +
+          Math.cos(x * layer.freq * 0.55 - waveTime * layer.speed * 65) * (layer.amp * 0.42);
+        if (x === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      }
+      ctx.strokeStyle = isDay ? layer.strokeDay : layer.strokeDark;
+      ctx.lineWidth = 1.25;
+      ctx.stroke();
+    });
+  }
+
   function render() {
     ctx.clearRect(0, 0, width, height);
     const isDay = document.documentElement.getAttribute('data-mode') === 'day';
 
-    for (let i = 0; i < particles.length; i++) {
-      for (let j = i + 1; j < particles.length; j++) {
-        const dx = particles[i].x - particles[j].x;
-        const dy = particles[i].y - particles[j].y;
-        const dist = Math.hypot(dx, dy);
-
-        if (dist < 110) {
-          ctx.beginPath();
-          ctx.moveTo(particles[i].x, particles[i].y);
-          ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = isDay ? `rgba(5, 150, 105, ${0.18 * (1 - dist / 110)})` : `rgba(16, 185, 129, ${0.12 * (1 - dist / 110)})`;
-          ctx.lineWidth = 0.75;
-          ctx.stroke();
-        }
-      }
-    }
+    waveTime += 0.016;
+    drawWaves(isDay);
 
     particles.forEach(p => {
       p.update();
-      p.draw();
+      p.draw(isDay);
     });
 
     requestAnimationFrame(render);

@@ -18,7 +18,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
 
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
@@ -44,8 +44,9 @@
 
     <ul class="nav-links">
       <li><a href="#hero" class="active">Overview</a></li>
-      <li><a href="#products">SaaS Products</a></li>
+      <li><a href="#products">Software</a></li>
       <li><a href="#capabilities">Engineering</a></li>
+      <li><a href="#pricing">Pricing</a></li>
       <li><a href="#about">About Us</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -105,8 +106,8 @@
 
         <div class="hero-stats-mini">
           <div class="stat-item">
-            <h3 class="font-mono">4+</h3>
-            <p>Live SaaS Products</p>
+            <h3 class="font-mono">8+</h3>
+            <p>Live SaaS & AI Systems</p>
           </div>
           <div class="stat-item">
             <h3 class="font-mono">99.9%</h3>
@@ -149,38 +150,51 @@
     <!-- METRICS & IMPACT BANNER -->
     <section class="metrics-section">
       <div class="metrics-grid">
-        <div class="glass-card metric-card">
+        <div class="glass-card metric-card reveal-on-scroll">
           <div class="metric-icon">🚀</div>
-          <div class="metric-num" data-target="4" data-suffix="+">0</div>
-          <div class="metric-label">Deployed SaaS & Web Platforms</div>
+          <div class="metric-num" data-target="8" data-suffix="+">0</div>
+          <div class="metric-label">Deployed SaaS, AI & Mobile Systems</div>
         </div>
 
-        <div class="glass-card metric-card">
+        <div class="glass-card metric-card reveal-on-scroll">
           <div class="metric-icon">👥</div>
           <div class="metric-num" data-target="50" data-suffix="K+">0</div>
           <div class="metric-label">Monthly Active Users Served</div>
         </div>
 
-        <div class="glass-card metric-card">
+        <div class="glass-card metric-card reveal-on-scroll">
           <div class="metric-icon">⚡</div>
           <div class="metric-num" data-target="99" data-suffix=".9%">0</div>
           <div class="metric-label">High-Availability Uptime</div>
         </div>
 
-        <div class="glass-card metric-card">
+        <div class="glass-card metric-card reveal-on-scroll">
           <div class="metric-icon">🌐</div>
-          <div class="metric-num" data-target="100" data-suffix="%">0</div>
-          <div class="metric-label">Modern Microservice Stack</div>
+          <div class="metric-num" data-target="15" data-suffix="+">0</div>
+          <div class="metric-label">Connected Cloud & AI Integrations</div>
         </div>
       </div>
     </section>
 
+    <div class="section-divider"></div>
+
     <!-- SAAS PRODUCTS SECTION (SINGLE VERTICAL SCROLLABLE TILES STREAM) -->
     <section class="section" id="products">
-      <div class="section-header">
-        <span class="section-tag">Product Ecosystem</span>
-        <h2 class="section-title">Engineered by Think Silicon</h2>
-        <p class="section-subtitle">Scroll through our vertical ecosystem of live SaaS platforms, enterprise management systems, and commerce engines.</p>
+      <div class="section-header reveal-on-scroll">
+        <div class="section-header-left">
+          <div class="section-index-row">
+            <span class="section-index">01</span>
+            <span class="section-tag">Full Software Ecosystem</span>
+          </div>
+          <h2 class="section-title">Engineered by<br><span class="text-gradient">Think Silicon</span></h2>
+        </div>
+        <div class="section-info-panel">
+          <p class="section-subtitle">Explore our complete software portfolio — from live multi-tenant SaaS platforms and enterprise club automation to native Android mobility apps and unsupervised PyTorch AI pipelines.</p>
+          <div class="section-info-meta">
+            <span>● 8+ Production & R&amp;D Systems</span>
+            <span>● Web, Cloud APIs, Android &amp; AI</span>
+          </div>
+        </div>
       </div>
 
       <!-- Filter Tabs -->
@@ -344,19 +358,203 @@
           </div>
         </a>
 
+        <!-- 6. JABOKOI TRANSIT & FASTAPI -->
+        <a href="https://github.com/ProdiptoPantho" target="_blank" rel="noopener noreferrer" class="product-tile fade-scroll-item" data-category="consumer productivity" title="Explore JaboKoi Transit Architecture">
+          <div class="tile-thumb">
+            <img src="assets/images/foundry-banner-hd.jpg" alt="JaboKoi Transit App & FastAPI">
+            <div class="tile-overlay-badges">
+              <span class="badge-live"><span class="live-dot"></span>Mobility</span>
+              <span class="badge-category">Android &amp; FastAPI</span>
+            </div>
+          </div>
+          <div class="tile-body">
+            <h3 class="tile-title">JaboKoi — Urban Transit &amp; Routing Engine</h3>
+            <p class="tile-desc">
+              Real-time urban commute and route-discovery platform combining a native Android client with an asynchronous Python FastAPI backend for low-latency transit queries.
+            </p>
+            <div class="tile-tech">
+              <span class="tech-tag">Kotlin / Android</span>
+              <span class="tech-tag">Python FastAPI</span>
+              <span class="tech-tag">REST Microservices</span>
+              <span class="tech-tag">Geo-Routing</span>
+            </div>
+            <div class="tile-links">
+              <div class="tile-link">
+                <span>View Architecture</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+              <span class="font-mono text-muted" style="font-size: 0.8rem;">Mobile + Cloud API</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 7. UNSUPERVISED NEURAL MUSIC GENERATION -->
+        <a href="https://github.com/ProdiptoPantho/music-generation-unsupervised" target="_blank" rel="noopener noreferrer" class="product-tile fade-scroll-item" data-category="enterprise productivity" title="Open Neural Music AI Repository">
+          <div class="tile-thumb">
+            <img src="assets/images/nova-real-hd.jpg" alt="Unsupervised Neural Music Generation Pipeline">
+            <div class="tile-overlay-badges">
+              <span class="badge-live"><span class="live-dot"></span>AI / ML</span>
+              <span class="badge-category">Deep Learning</span>
+            </div>
+          </div>
+          <div class="tile-body">
+            <h3 class="tile-title">Neural Music Gen — Unsupervised AI Pipeline</h3>
+            <p class="tile-desc">
+              End-to-end unsupervised deep learning research &amp; synthesis engine built on Variational Autoencoders (VAEs) and Transformer attention layers for generative audio composition.
+            </p>
+            <div class="tile-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">PyTorch</span>
+              <span class="tech-tag">VAEs &amp; Transformers</span>
+              <span class="tech-tag">Audio Synthesis</span>
+            </div>
+            <div class="tile-links">
+              <div class="tile-link">
+                <span>Inspect ML Pipeline</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+              <span class="font-mono text-muted" style="font-size: 0.8rem;">github.com/ProdiptoPantho</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 8. VANGTICHAI FINTECH UTILITY -->
+        <a href="https://github.com/ProdiptoPantho" target="_blank" rel="noopener noreferrer" class="product-tile fade-scroll-item" data-category="commerce productivity" title="Explore VangtiChai FinTech Utility">
+          <div class="tile-thumb">
+            <img src="assets/images/slashed-real-hd.jpg" alt="VangtiChai FinTech Currency Utility">
+            <div class="tile-overlay-badges">
+              <span class="badge-live"><span class="live-dot"></span>FinTech</span>
+              <span class="badge-category">Mobile Utility</span>
+            </div>
+          </div>
+          <div class="tile-body">
+            <h3 class="tile-title">VangtiChai — Smart Currency &amp; Change Utility</h3>
+            <p class="tile-desc">
+              Lightweight mobile financial utility engineered for instant cash-denomination breakdown, point-of-sale change calculation, and everyday retail micro-transactions.
+            </p>
+            <div class="tile-tech">
+              <span class="tech-tag">Kotlin</span>
+              <span class="tech-tag">Android SDK</span>
+              <span class="tech-tag">Material UI</span>
+              <span class="tech-tag">Offline-First</span>
+            </div>
+            <div class="tile-links">
+              <div class="tile-link">
+                <span>Explore Utility</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+              <span class="font-mono text-muted" style="font-size: 0.8rem;">FinTech Mobile</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- CONNECTED SOFTWARE STACK & INTEGRATIONS -->
+      <div class="stack-showcase reveal-on-scroll">
+        <div class="stack-showcase-header">
+          <div>
+            <span class="section-tag" style="margin-bottom: 0.65rem;">Connected Toolchain</span>
+            <h3>Full-Spectrum Software &amp; Integration Stack</h3>
+          </div>
+          <p>
+            Every Think Silicon product is powered by a unified, battle-tested ecosystem of frontend frameworks, high-concurrency APIs, relational &amp; cache layers, and AI automation pipelines.
+          </p>
+        </div>
+
+        <div class="stack-grid">
+          <div class="glass-card stack-card">
+            <div class="stack-card-head">
+              <h4 class="stack-card-title">Frontend &amp; Native Mobile</h4>
+              <span class="stack-status-dot" title="Active Production Stack"></span>
+            </div>
+            <p class="stack-card-desc">
+              Responsive web applications, interactive 3D storefronts, and native mobile experiences engineered for sub-second interaction.
+            </p>
+            <div class="stack-pill-list">
+              <span class="stack-pill">React</span>
+              <span class="stack-pill">Next.js</span>
+              <span class="stack-pill">TypeScript</span>
+              <span class="stack-pill">Tailwind CSS</span>
+              <span class="stack-pill">Kotlin / Android</span>
+            </div>
+          </div>
+
+          <div class="glass-card stack-card">
+            <div class="stack-card-head">
+              <h4 class="stack-card-title">Backend, APIs &amp; Security</h4>
+              <span class="stack-status-dot" title="Active Production Stack"></span>
+            </div>
+            <p class="stack-card-desc">
+              High-throughput service layers with role-based access control, JWT/OAuth2 authentication, and real-time event streaming.
+            </p>
+            <div class="stack-pill-list">
+              <span class="stack-pill">Python FastAPI</span>
+              <span class="stack-pill">Node.js</span>
+              <span class="stack-pill">REST &amp; WebSockets</span>
+              <span class="stack-pill">RBAC &amp; OAuth 2.0</span>
+            </div>
+          </div>
+
+          <div class="glass-card stack-card">
+            <div class="stack-card-head">
+              <h4 class="stack-card-title">Databases, Cloud &amp; Edge</h4>
+              <span class="stack-status-dot" title="Active Production Stack"></span>
+            </div>
+            <p class="stack-card-desc">
+              Resilient data persistence, distributed caching, containerized deployments, and global CDN edge routing for 99.9% uptime.
+            </p>
+            <div class="stack-pill-list">
+              <span class="stack-pill">MySQL</span>
+              <span class="stack-pill">PostgreSQL</span>
+              <span class="stack-pill">Redis Cache</span>
+              <span class="stack-pill">Docker</span>
+              <span class="stack-pill">Vercel Edge</span>
+            </div>
+          </div>
+
+          <div class="glass-card stack-card">
+            <div class="stack-card-head">
+              <h4 class="stack-card-title">AI, ML &amp; Payment Rails</h4>
+              <span class="stack-status-dot" title="Active Production Stack"></span>
+            </div>
+            <p class="stack-card-desc">
+              Production machine learning pipelines, LLM-assisted workflows, automated billing gateways, and live operational telemetry.
+            </p>
+            <div class="stack-pill-list">
+              <span class="stack-pill">PyTorch</span>
+              <span class="stack-pill">VAEs &amp; Transformers</span>
+              <span class="stack-pill">LLM Automation</span>
+              <span class="stack-pill">Billing APIs</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
+    <div class="section-divider"></div>
+
     <!-- SAAS ENGINEERING CAPABILITIES & ARCHITECTURE -->
     <section class="section" id="capabilities">
-      <div class="section-header">
-        <span class="section-tag">Core Capabilities</span>
-        <h2 class="section-title">The Think Silicon Advantage</h2>
-        <p class="section-subtitle">Our architectural philosophy is founded on high-throughput reliability, modular extensibility, and delightful user experiences.</p>
+      <div class="section-header reveal-on-scroll">
+        <div class="section-header-left">
+          <div class="section-index-row">
+            <span class="section-index">02</span>
+            <span class="section-tag">Core Capabilities</span>
+          </div>
+          <h2 class="section-title">The Think Silicon<br><span class="text-gradient">Advantage</span></h2>
+        </div>
+        <div class="section-info-panel">
+          <p class="section-subtitle">Our architectural philosophy is founded on high-throughput reliability, modular extensibility, and delightful user experiences that convert and retain users.</p>
+          <div class="section-info-meta">
+            <span>● Zero-Downtime Focus</span>
+            <span>● Enterprise RBAC &amp; Audits</span>
+          </div>
+        </div>
       </div>
 
       <div class="services-grid">
-        <div class="glass-card service-card">
+        <div class="glass-card service-card reveal-on-scroll">
           <div class="service-icon">⚡</div>
           <h3>High-Concurrency Cloud</h3>
           <p>
@@ -364,23 +562,23 @@
           </p>
         </div>
 
-        <div class="glass-card service-card">
+        <div class="glass-card service-card reveal-on-scroll">
           <div class="service-icon">🔒</div>
-          <h3>Enterprise Security & RBAC</h3>
+          <h3>Enterprise Security &amp; RBAC</h3>
           <p>
             Granular role-based permissions, encrypted credential storage, JWT/OAuth 2.0 flows, and automated audit logging ensuring business-critical data integrity.
           </p>
         </div>
 
-        <div class="glass-card service-card">
+        <div class="glass-card service-card reveal-on-scroll">
           <div class="service-icon">🧠</div>
-          <h3>AI & Algorithmic Automation</h3>
+          <h3>AI &amp; Algorithmic Automation</h3>
           <p>
             Integrating intelligent recommendation engines, automated workflows, and LLM-driven features directly into your core business products.
           </p>
         </div>
 
-        <div class="glass-card service-card">
+        <div class="glass-card service-card reveal-on-scroll">
           <div class="service-icon">🎨</div>
           <h3>World-Class UI/UX</h3>
           <p>
@@ -390,20 +588,127 @@
       </div>
     </section>
 
+    <div class="section-divider"></div>
+
+    <!-- DEDICATED PRICING SECTION -->
+    <section class="section" id="pricing">
+      <div class="section-header reveal-on-scroll">
+        <div class="section-header-left">
+          <div class="section-index-row">
+            <span class="section-index">03</span>
+            <span class="section-tag">Engagement Models</span>
+          </div>
+          <h2 class="section-title">Transparent<br><span class="text-gradient">Project Pricing</span></h2>
+        </div>
+        <div class="section-info-panel">
+          <p class="section-subtitle">Flexible engineering packages tailored to startups launching an MVP, growing companies scaling SaaS operations, and enterprises commissioning custom platforms.</p>
+          <div class="section-info-meta">
+            <span>● Milestone-Based Delivery</span>
+            <span>● Full Source Ownership</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Tier 1 -->
+        <div class="glass-card pricing-card reveal-on-scroll">
+          <div>
+            <span class="pricing-badge">Launchpad</span>
+            <h3 class="pricing-tier">MVP &amp; Web Platform</h3>
+            <div class="pricing-price">$1,500 <span>/ starting</span></div>
+            <p class="pricing-desc">Ideal for founders and businesses validating a focused SaaS product, landing ecosystem, or booking portal.</p>
+            <ul class="pricing-features">
+              <li>Custom responsive UI/UX &amp; brand system</li>
+              <li>Core authentication &amp; database schema</li>
+              <li>REST API integration &amp; admin dashboard</li>
+              <li>Production cloud deployment &amp; SSL</li>
+              <li>30 days post-launch technical support</li>
+            </ul>
+          </div>
+          <a href="#contact" class="btn btn-outline" style="width: 100%;">Request Launchpad Scope</a>
+        </div>
+
+        <!-- Tier 2 (Popular) -->
+        <div class="glass-card pricing-card pricing-popular reveal-on-scroll">
+          <div>
+            <span class="pricing-badge"><span class="pulse-dot"></span>Most Popular</span>
+            <h3 class="pricing-tier">Growth SaaS Suite</h3>
+            <div class="pricing-price">$4,500 <span>/ starting</span></div>
+            <p class="pricing-desc">Full-scale multi-tenant SaaS or enterprise operations platform built for high concurrency and monetization.</p>
+            <ul class="pricing-features">
+              <li>Multi-tenant architecture &amp; granular RBAC</li>
+              <li>Subscription billing &amp; payment gateway integration</li>
+              <li>High-concurrency caching &amp; analytics engine</li>
+              <li>Automated CI/CD, testing &amp; observability</li>
+              <li>90 days priority engineering &amp; scaling SLA</li>
+            </ul>
+          </div>
+          <a href="#contact" class="btn btn-primary" style="width: 100%;">Start Growth Build</a>
+        </div>
+
+        <!-- Tier 3 -->
+        <div class="glass-card pricing-card reveal-on-scroll">
+          <div>
+            <span class="pricing-badge">Enterprise</span>
+            <h3 class="pricing-tier">Enterprise &amp; Custom AI</h3>
+            <div class="pricing-price">Custom <span>/ retainer or scope</span></div>
+            <p class="pricing-desc">Bespoke distributed systems, AI/ML pipelines, mobile ecosystems, and dedicated engineering pods.</p>
+            <ul class="pricing-features">
+              <li>Custom AI/ML models &amp; LLM workflow automation</li>
+              <li>Web + native Android/mobile ecosystem sync</li>
+              <li>Legacy system migration &amp; security hardening</li>
+              <li>Dedicated technical architect &amp; SLA guarantee</li>
+              <li>Ongoing feature roadmap &amp; DevOps retainer</li>
+            </ul>
+          </div>
+          <a href="#contact" class="btn btn-silver" style="width: 100%;">Book Architecture Call</a>
+        </div>
+      </div>
+
+      <!-- Required Flexible Pricing Disclaimer -->
+      <div class="pricing-disclaimer reveal-on-scroll" role="note" aria-label="Pricing flexibility notice">
+        <div class="pricing-disclaimer-icon">ℹ️</div>
+        <p>
+          <strong>Flexible Pricing Notice:</strong> The figures above serve as baseline estimates. Final pricing is flexible and may <strong>increase or decrease</strong> depending on your project's specific scope, technical complexity, integrations, timeline, and overall requirements.
+        </p>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
     <!-- ABOUT THINK SILICON -->
     <section class="section" id="about">
-      <div class="glass-card" style="padding: 3rem 2.5rem; border-color: var(--border-card-hover);">
+      <div class="section-header reveal-on-scroll">
+        <div class="section-header-left">
+          <div class="section-index-row">
+            <span class="section-index">04</span>
+            <span class="section-tag">Studio Identity</span>
+          </div>
+          <h2 class="section-title">Inside<br><span class="text-gradient">Think Silicon</span></h2>
+        </div>
+        <div class="section-info-panel">
+          <p class="section-subtitle">A precision-driven software studio turning ambitious ideas into fast, resilient, and visually unforgettable digital products.</p>
+          <div class="section-info-meta">
+            <span>● Dhaka Engineering Hub</span>
+            <span>● Global Client Delivery</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-card reveal-on-scroll" style="padding: 3rem 2.5rem; border-color: var(--border-card-hover);">
         <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 3rem; align-items: center;">
           <div style="text-align: center;">
-            <img src="assets/images/think-silicon-logo.jpg" alt="Think Silicon Monogram" style="max-width: 240px; border-radius: 1.5rem; border: 2px solid rgba(255,255,255,0.15); box-shadow: 0 15px 40px rgba(0,0,0,0.3);">
+            <div class="about-logo-ring">
+              <img src="assets/images/think-silicon-logo.jpg" alt="Think Silicon Circular Monogram">
+            </div>
           </div>
           <div>
-            <span class="section-tag">About Company</span>
-            <h2 style="font-size: 2.2rem; font-weight: 800; color: var(--text-primary); margin-bottom: 1rem;">Building the Future of Software at Scale.</h2>
-            <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
+            <span class="section-tag" style="margin-bottom: 0.85rem;">About Company</span>
+            <h3 class="about-headline">Building the Future of Software at Scale.</h3>
+            <p style="color: var(--text-secondary); line-height: 1.75; margin-bottom: 1.5rem;">
               <strong>Think Silicon</strong> is a technology studio that specializes in transforming ambitious concepts into resilient, scalable SaaS applications. Guided by an obsession with speed, architectural elegance, and user delight, we partner with visionary teams to deploy systems that endure.
             </p>
-            <div style="display: flex; gap: 2rem; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.25rem;">
+            <div style="display: flex; flex-wrap: wrap; gap: 2rem; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.25rem;">
               <div>
                 <h4 style="font-size: 1.5rem; font-weight: 800; color: var(--text-primary);">Dhaka, BD</h4>
                 <p style="font-size: 0.82rem; color: var(--text-muted); text-transform: uppercase;">Engineering Hub</p>
@@ -422,15 +727,28 @@
       </div>
     </section>
 
+    <div class="section-divider"></div>
+
     <!-- CONTACT & CONSULTATION SECTION -->
     <section class="section" id="contact">
-      <div class="section-header">
-        <span class="section-tag">Enterprise Inquiries</span>
-        <h2 class="section-title">Let's Build Your Next SaaS</h2>
-        <p class="section-subtitle">Discuss custom product engineering, enterprise license inquiries, or schedule a technical advisory session.</p>
+      <div class="section-header reveal-on-scroll">
+        <div class="section-header-left">
+          <div class="section-index-row">
+            <span class="section-index">05</span>
+            <span class="section-tag">Enterprise Inquiries</span>
+          </div>
+          <h2 class="section-title">Let's Build Your<br><span class="text-gradient">Next SaaS</span></h2>
+        </div>
+        <div class="section-info-panel">
+          <p class="section-subtitle">Discuss custom product engineering, flexible project scoping, enterprise license inquiries, or schedule a direct technical advisory session.</p>
+          <div class="section-info-meta">
+            <span>● Response Under 24 Hours</span>
+            <span>● Direct Founder &amp; Architect Access</span>
+          </div>
+        </div>
       </div>
 
-      <div class="contact-container">
+      <div class="contact-container reveal-on-scroll">
         <!-- Left: Corporate Info -->
         <div class="contact-info">
           <h3>Empower your product vision with Think Silicon.</h3>
@@ -508,23 +826,68 @@
       </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- EXPANDED POST-INQUIRY FOOTER -->
     <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-brand">
-          <a href="#hero" class="nav-brand">
+      <div class="glass-card footer-closing-banner reveal-on-scroll">
+        <div>
+          <h3 class="footer-closing-title">Ready to Architect What's Next?</h3>
+          <p class="footer-closing-sub">Partner with Think Silicon to turn high-ambition software concepts into resilient, production-grade cloud platforms.</p>
+        </div>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="#pricing" class="btn btn-outline">View Pricing</a>
+          <a href="#contact" class="btn btn-primary">Start a Project ↗</a>
+        </div>
+      </div>
+
+      <div class="footer-grid reveal-on-scroll">
+        <div class="footer-col">
+          <a href="#hero" class="nav-brand" style="margin-bottom: 1rem;">
             <img src="assets/images/think-silicon-logo.jpg" alt="Think Silicon Logo" class="brand-emblem-img">
             <span>THINK <span class="text-gradient">SILICON</span></span>
           </a>
-          <p>© 2026 Think Silicon. All rights reserved. Architecting Next-Gen SaaS Ecosystems.</p>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.65; max-width: 320px;">
+            Scalable SaaS ecosystems, enterprise operations platforms, mobile transit systems, and applied AI engineering built for peak performance.
+          </p>
         </div>
 
-        <div class="footer-socials" style="display: flex; gap: 1.25rem;">
-          <a href="https://quizboxbd.com" target="_blank" rel="noopener noreferrer" style="color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; font-weight: 600;">QuizBox BD</a>
-          <a href="https://hallbooking.gulshanclub.com" target="_blank" rel="noopener noreferrer" style="color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; font-weight: 600;">Gulshan Club Booking</a>
-          <a href="https://templateecommerce-seven.vercel.app" target="_blank" rel="noopener noreferrer" style="color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; font-weight: 600;">NOVA</a>
-          <a href="https://slashed-app-web.vercel.app" target="_blank" rel="noopener noreferrer" style="color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; font-weight: 600;">Slashed</a>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="#hero">Overview</a></li>
+            <li><a href="#products">Software Ecosystem</a></li>
+            <li><a href="#capabilities">Core Capabilities</a></li>
+            <li><a href="#pricing">Project Pricing</a></li>
+            <li><a href="#about">About Think Silicon</a></li>
+            <li><a href="#contact">Submit Inquiry</a></li>
+          </ul>
         </div>
+
+        <div class="footer-col">
+          <h4>Live Platforms</h4>
+          <ul class="footer-links-list">
+            <li><a href="https://quizboxbd.com" target="_blank" rel="noopener noreferrer">QuizBox BD</a></li>
+            <li><a href="https://hallbooking.gulshanclub.com" target="_blank" rel="noopener noreferrer">Gulshan Club Booking</a></li>
+            <li><a href="https://templateecommerce-seven.vercel.app" target="_blank" rel="noopener noreferrer">NOVA 3D Commerce</a></li>
+            <li><a href="https://slashed-app-web.vercel.app" target="_blank" rel="noopener noreferrer">Slashed Local Offers</a></li>
+            <li><a href="https://github.com/ProdiptoPantho/music-generation-unsupervised" target="_blank" rel="noopener noreferrer">Neural Music AI</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact &amp; Availability</h4>
+          <ul class="footer-links-list">
+            <li><a href="mailto:prodiptopantho@gmail.com">prodiptopantho@gmail.com</a></li>
+            <li><a href="tel:+8801626945062">+880 1626-945062</a></li>
+            <li><span>HQ: Dhaka, Bangladesh (Global Remote)</span></li>
+            <li><span>Hours: Sun–Thu, 10:00–20:00 BST</span></li>
+            <li><span style="color: var(--lime-micro);">● Accepting Q4/Q1 SaaS Builds</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <span>© 2026 Think Silicon. All rights reserved.</span>
+        <span>Engineered with Deep Emerald Glassmorphism &amp; High-Concurrency Standards.</span>
       </div>
     </footer>
 
