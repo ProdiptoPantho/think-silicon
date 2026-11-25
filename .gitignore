@@ -1,5 +1,17 @@
+# Environment & Secret Files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Deployment & Dependencies
 .vercel
 node_modules
+
+# OS & Logs
 .DS_Store
 Thumbs.db
 *.log
+*.log*
+logs/
